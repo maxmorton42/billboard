@@ -6,10 +6,14 @@
 <% @artist.songs.each do |song| %>
   <%= render 'songs/song', { song: song } %>
 <hr />
-<%= link_to 'Add Song', new_artist_song_path(@artist) %>
-<%= link_to 'Edit Artist', edit_billboard_artist_path([@billboard, @artist]) %>
-<%= link_to 'Delete Artist', [@billboard, @artist], method: :delete %>
-<%= link_to 'Back To Artist', billboard_artists_path(@billboard) %>
+
+
+
+
 
 
 <% end %>
+<%= link_to 'Edit Artist', edit_billboard_artist_path([@billboard, @artist]) %>
+<%= link_to 'Delete Artist', [@billboard, @artist], method: :delete %>
+<%= link_to 'Back To Artist', billboard_artists_path(@billboard) %>
+<%= link_to 'Add Song', new_artist_song_path(@artist) %>

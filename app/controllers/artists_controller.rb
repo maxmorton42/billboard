@@ -40,6 +40,13 @@ class ArtistsController < ApplicationController
 
   end
 
+  def destroy
+    @artist.destroy
+    redirect_to billboard_artists_path
+   
+  end
+
+
  private
   def set_billboard
     @billboard = Billboard.find(params[:billboard_id])
