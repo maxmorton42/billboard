@@ -1,7 +1,21 @@
-<h1>Click a Artist To View Songs</h1>
-<%= link_to 'Create a new artist', new_billboard_artist_path(@billboard) %>
-<ul>
+
+<hr/>
+<h1 class="ui header">Click a Artist To View Their Songs</h1>
+<h2><%= link_to 'Billboard: Top songs', artist_songs_path(@artists) %></h2>
+<h4><%= link_to 'Create a new artist', new_billboard_artist_path(@billboard) %></h4>
+<div class="ui divider"></div>
+<div class="ui grid">
+<ol>
   <% @artists.each do |artist| %>
-    <li><%= link_to artist.name, [@billboard, artist] %></li>
+    <div class= "sixteen wide mobile eight wide tablet four wide computer column">
+    <div class="ui card">
+       </div>
+          <div class="content">
+           <li><%= link_to artist.name, [@billboard, artist] %></li>
+          </div>
+    </div>
+    
   <% end %>
-</ul>
+</ol>
+</div>
+

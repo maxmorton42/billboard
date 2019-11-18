@@ -1,7 +1,8 @@
-<h1><%= @billboard.chart %></h1>
+<hr />
+<h1 class="ui header"><%= @billboard.chart %></h1>
 <p>What would you like to do?</p><br>
-<%= link_to 'View Artist', billboard_artists_path(@billboard) %>
-<br />
-<%= link_to 'Edit Billboard', edit_billboard_path(@billboard) %>
-<br />
-<%= link_to 'Delete Billboard', @billboard, method: :delete %>
+  <button class="ui green basic button"><%= link_to 'View Artist', billboard_artists_path(@billboard) %></button>
+
+  <button class="ui red basic button"><%= link_to 'Edit Billboard', edit_billboard_path(@billboard) %></button>
+
+  <button class="ui brown basic button"><%= link_to 'Delete Billboard', @billboard, method: :delete %></button>

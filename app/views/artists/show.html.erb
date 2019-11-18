@@ -1,3 +1,5 @@
+
+<hr />
 <h1><%= @artist.name %></h1>
 <p><%= @artist.genre %></p>
 <p><%= @artist.bio %></p>
@@ -7,13 +9,11 @@
   <%= render 'songs/song', { song: song } %>
 <hr />
 
-
-
-
-
-
 <% end %>
-<%= link_to 'Edit Artist', edit_billboard_artist_path([@billboard, @artist]) %>
-<%= link_to 'Delete Artist', [@billboard, @artist], method: :delete %>
-<%= link_to 'Back To Artist', billboard_artists_path(@billboard) %>
-<%= link_to 'Add Song', new_artist_song_path(@artist) %>
+<div class="extra content">
+
+<button class="ui green basic button"><%= link_to 'Billboard: Top songs', artist_songs_path(@artist) %></button>
+<button class="ui basic red button"><%= link_to 'Edit Artist', edit_billboard_artist_path([@billboard, @artist]) %></button>
+<button class="ui basic blue button"><%= link_to 'Delete Artist', [@billboard, @artist], method: :delete %></button>
+<button class="ui basic yellow button"><%= link_to 'Back To Artists', billboard_artists_path(@billboard) %></button>
+<button class="ui basic purple button"><%= link_to 'Add Song', new_artist_song_path(@artist) %></button>
